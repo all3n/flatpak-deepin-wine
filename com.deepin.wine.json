@@ -1,0 +1,35 @@
+{
+	"id": "com.deepin.wine.Sdk",
+	"id-platform": "com.deepin.wine.Platform",
+	"branch": "2.18.18",
+	"runtime": "org.freedesktop.Platform",
+	"runtime-version": "18.08",
+	"sdk": "org.freedesktop.Sdk",
+	"build-runtime": true,
+	"separate-locales": false,
+	
+	"finish-args": [
+		"--sdk=com.deepin.wine.Sdk//2.18.18",
+		"--runtime=com.deepin.wine.Platform//2.18.18"
+	],
+	
+	"modules": [
+		{
+			"name": "deepinwine",
+			"buildsystem": "simple",
+			"build-commands": [
+				"bash ./install.sh"
+			],
+			
+			"sources": [
+				{
+					"type": "dir",
+                    "path": "wine"
+				}
+			]
+			
+		}
+	
+	]
+	
+}
